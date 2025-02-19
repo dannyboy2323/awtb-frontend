@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'polaroid': "url('/main.jpg')",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -15,4 +18,5 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+}
+satisfies Config;
