@@ -28,31 +28,250 @@ body {
   align-items: center;
 }
 
-/* Mobile portrait (small screens) */
-@media (max-width: 767px) {
+/* Mobile Portrait (small screens) */
+@media (max-width: 767px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-1409x2752-1001.jpg');
+    background-image: url('/hero-pt-1409x2752.jpg');
   }
 }
 
-/* Tablet portrait (medium screens) */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Tablet Portrait (medium screens) */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-1992x3891-1012.jpg');
+    background-image: url('/hero-pt-1992x3891.jpg');
   }
 }
 
-/* Desktop and larger screens */
-@media (min-width: 1024px) {
+/* Desktop Portrait (large screens) */
+@media (min-width: 1024px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-3450x6739-2001.jpg');
+    background-image: url('/hero-pt-3450x6739.jpeg');
   }
 }
 
-/* Placeholder for landscape versions */
-@media (orientation: landscape) {
+/* Mobile Landscape (small screens) */
+@media (max-width: 767px) and (orientation: landscape) {
   body {
-    background-image: url('/placeholder-landscape.jpg');
-    /* Placeholder for landscape image */
+    background-image: url('/hero-ls-1280x720.jpg');
+  }
+}
+
+/* Tablet Landscape (medium screens) */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-1920x1080.jpg');
+  }
+}
+
+/* Desktop Landscape (large screens) */
+@media (min-width: 1024px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-5702x4276.jpg');
+  }
+}
+
+/* Specific breakpoints for portrait */
+@media (max-width: 320px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-720x1280.jpg');
+  }
+}
+
+@media (max-width: 360px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-768x1366.jpg');
+  }
+}
+
+@media (max-width: 414px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-1080x1920.jpg');
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-1200x1920.jpg');
+  }
+}
+
+@media (max-width: 540px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-1409x2752.jpg');
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-1440x2560.jpg');
+  }
+}
+
+@media (max-width: 720px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-1440x3440.jpg');
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-1440x5120.jpg');
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-1600x2560.jpg');
+  }
+}
+
+@media (max-width: 828px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-1668x2388.jpg');
+  }
+}
+
+@media (max-width: 1080px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-1992x3891.jpg');
+  }
+}
+
+@media (max-width: 2048px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-2048x2732.jpg');
+  }
+}
+
+@media (max-width: 2160px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-2160x3840.jpg');
+  }
+}
+
+@media (max-width: 3440px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-3450x6739.jpeg');
+  }
+}
+
+@media (max-width: 4320px) and (orientation: portrait) {
+  body {
+    background-image: url('/hero-pt-4320x7680.jpg');
+  }
+}
+
+/* Specific breakpoints for landscape */
+@media (max-width: 320px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-720x1280.jpg');
+  }
+}
+
+@media (max-width: 360px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-768x1366.jpg');
+  }
+}
+
+@media (max-width: 414px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-1080x1920.jpg');
+  }
+}
+
+@media (max-width: 480px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-1200x1920.jpg');
+  }
+}
+
+@media (max-width: 540px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-1280x720.jpg');
+  }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-1280x800.jpg');
+  }
+}
+
+@media (max-width: 720px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-1366x768.jpg');
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-1920x1080.jpg');
+  }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-1920x1200.jpg');
+  }
+}
+
+@media (max-width: 828px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-2340x1080.jpg');
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-2388x1668.jpg');
+  }
+}
+
+@media (max-width: 1280px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-2560x1440.jpg');
+  }
+}
+
+@media (max-width: 1440px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-2560x1600.jpg');
+  }
+}
+
+@media (max-width: 1536px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-2732x2048.jpg');
+  }
+}
+
+@media (max-width: 1920px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-3440x1440.jpg');
+  }
+}
+
+@media (max-width: 2160px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-3840x2160.jpg');
+  }
+}
+
+@media (max-width: 3024px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-4032x3024.jpg');
+  }
+}
+
+@media (max-width: 5120px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-5120x1440.jpg');
+  }
+}
+
+@media (max-width: 7680px) and (orientation: landscape) {
+  body {
+    background-image: url('/hero-ls-7680x4320.jpg');
   }
 }
