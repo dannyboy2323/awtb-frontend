@@ -14,7 +14,6 @@
   }
 }
 
-/* Ensure the background image takes up the full viewport */
 body {
   margin: 0;
   padding: 0;
@@ -28,250 +27,244 @@ body {
   align-items: center;
 }
 
-/* Mobile Portrait (small screens) */
-@media (max-width: 767px) and (orientation: portrait) {
-  body {
-    background-image: url('/hero-pt-1409x2752.jpg');
-  }
-}
-
-/* Tablet Portrait (medium screens) */
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
-  body {
-    background-image: url('/hero-pt-1992x3891.jpg');
-  }
-}
-
-/* Desktop Portrait (large screens) */
-@media (min-width: 1024px) and (orientation: portrait) {
-  body {
-    background-image: url('/hero-pt-3450x6739.jpeg');
-  }
-}
-
-/* Mobile Landscape (small screens) */
-@media (max-width: 767px) and (orientation: landscape) {
-  body {
-    background-image: url('/hero-ls-1280x720.jpg');
-  }
-}
-
-/* Tablet Landscape (medium screens) */
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
-  body {
-    background-image: url('/hero-ls-1920x1080.jpg');
-  }
-}
-
-/* Desktop Landscape (large screens) */
-@media (min-width: 1024px) and (orientation: landscape) {
-  body {
-    background-image: url('/hero-ls-5702x4276.jpg');
-  }
-}
-
-/* Specific breakpoints for portrait */
+/* ----------------------- Portrait Orientation ----------------------- */
 @media (max-width: 320px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-720x1280.jpg');
+    background-image: url('/landing-pt-720x1280.jpg');
   }
 }
 
 @media (max-width: 360px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-768x1366.jpg');
+    background-image: url('/landing-pt-768x1366.jpg');
   }
 }
 
 @media (max-width: 414px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-1080x1920.jpg');
+    background-image: url('/landing-pt-800x1280.jpg');
   }
 }
 
 @media (max-width: 480px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-1200x1920.jpg');
+    background-image: url('/landing-pt-1080x1920.jpg');
   }
 }
 
 @media (max-width: 540px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-1409x2752.jpg');
+    background-image: url('/landing-pt-1080x2340.jpg');
   }
 }
 
 @media (max-width: 600px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-1440x2560.jpg');
+    background-image: url('/landing-pt-1200x1920.jpg');
   }
 }
 
 @media (max-width: 720px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-1440x3440.jpg');
+    background-image: url('/landing-pt-1409x2752.jpg');
   }
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-1440x5120.jpg');
+    background-image: url('/landing-pt-1440x2560.jpg');
   }
 }
 
 @media (max-width: 800px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-1600x2560.jpg');
+    background-image: url('/landing-pt-1440x3440.jpg');
   }
 }
 
 @media (max-width: 828px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-1668x2388.jpg');
+    background-image: url('/landing-pt-1600x2560.jpg');
   }
 }
 
 @media (max-width: 1080px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-1992x3891.jpg');
+    background-image: url('/landing-pt-1668x2388.jpg');
+  }
+}
+
+@media (max-width: 1440px) and (orientation: portrait) {
+  body {
+    background-image: url('/landing-pt-1992x3891.jpg');
   }
 }
 
 @media (max-width: 2048px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-2048x2732.jpg');
+    background-image: url('/landing-pt-2048x2732.jpg');
   }
 }
 
 @media (max-width: 2160px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-2160x3840.jpg');
+    background-image: url('/landing-pt-2160x3840.jpg');
   }
 }
 
 @media (max-width: 3440px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-3450x6739.jpeg');
+    background-image: url('/landing-pt-3450x6739.jpeg');
   }
 }
 
 @media (max-width: 4320px) and (orientation: portrait) {
   body {
-    background-image: url('/hero-pt-4320x7680.jpg');
+    background-image: url('/landing-pt-4320x7680.jpg');
   }
 }
 
-/* Specific breakpoints for landscape */
-@media (max-width: 320px) and (orientation: landscape) {
-  body {
-    background-image: url('/hero-ls-720x1280.jpg');
-  }
-}
-
+/* ----------------------- Landscape Orientation ----------------------- */
 @media (max-width: 360px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-768x1366.jpg');
+    background-image: url('/landing-ls-640x360.jpg');
   }
 }
 
 @media (max-width: 414px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-1080x1920.jpg');
-  }
-}
-
-@media (max-width: 480px) and (orientation: landscape) {
-  body {
-    background-image: url('/hero-ls-1200x1920.jpg');
-  }
-}
-
-@media (max-width: 540px) and (orientation: landscape) {
-  body {
-    background-image: url('/hero-ls-1280x720.jpg');
-  }
-}
-
-@media (max-width: 600px) and (orientation: landscape) {
-  body {
-    background-image: url('/hero-ls-1280x800.jpg');
-  }
-}
-
-@media (max-width: 720px) and (orientation: landscape) {
-  body {
-    background-image: url('/hero-ls-1366x768.jpg');
+    background-image: url('/landing-ls-854x480.jpg');
   }
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-1920x1080.jpg');
+    background-image: url('/landing-ls-1280x720.jpg');
   }
 }
 
 @media (max-width: 800px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-1920x1200.jpg');
+    background-image: url('/landing-ls-1280x800.jpg');
   }
 }
 
 @media (max-width: 828px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-2340x1080.jpg');
+    background-image: url('/landing-ls-1334x750.jpg');
   }
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-2388x1668.jpg');
+    background-image: url('/landing-ls-1366x768.jpg');
   }
 }
 
-@media (max-width: 1280px) and (orientation: landscape) {
+@media (max-width: 1080px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-2560x1440.jpg');
+    background-image: url('/landing-ls-1440x900.jpg');
+  }
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-1600x900.jpg');
   }
 }
 
 @media (max-width: 1440px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-2560x1600.jpg');
+    background-image: url('/landing-ls-1920x1080.jpg');
   }
 }
 
 @media (max-width: 1536px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-2732x2048.jpg');
+    background-image: url('/landing-ls-1920x1200.jpg');
+  }
+}
+
+@media (max-width: 1620px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-2048x1536.jpg');
+  }
+}
+
+@media (max-width: 1668px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-2160x1620.jpg');
+  }
+}
+
+@media (max-width: 1680px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-2224x1668.jpg');
   }
 }
 
 @media (max-width: 1920px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-3440x1440.jpg');
+    background-image: url('/landing-ls-2340x1080.jpg');
+  }
+} 
+
+@media (max-width: 2048px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-2388x1668.jpg');
   }
 }
 
-@media (max-width: 2160px) and (orientation: landscape) {
+@media (max-width: 2520px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-3840x2160.jpg');
+    background-image: url('/landing-ls-2520x1080.jpg');
   }
 }
 
-@media (max-width: 3024px) and (orientation: landscape) {
+@media (max-width: 2560px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-4032x3024.jpg');
+    background-image: url('/landing-ls-2560x1440.jpg');
+  }
+}
+
+@media (max-width: 2732px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-2560x1600.jpg');
+  }
+}
+
+@media (max-width: 2880px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-2732x2048.jpg');
+  }
+}
+
+@media (max-width: 3440px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-3440x1440.jpg');
+  }
+}
+
+@media (max-width: 3840px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-3840x2160.jpg');
+  }
+}
+
+@media (max-width: 4032px) and (orientation: landscape) {
+  body {
+    background-image: url('/landing-ls-4032x1685.jpg');
   }
 }
 
 @media (max-width: 5120px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-5120x1440.jpg');
+    background-image: url('/landing-ls-5120x1440.jpg');
   }
 }
 
 @media (max-width: 7680px) and (orientation: landscape) {
   body {
-    background-image: url('/hero-ls-7680x4320.jpg');
+    background-image: url('/landing-ls-7680x4320.jpg');
   }
 }
