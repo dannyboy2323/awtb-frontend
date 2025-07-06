@@ -11,6 +11,12 @@ const getStoryContent = async (slug: string) => {
       content: null // MDX content would be imported here
     }
   }
+  if (slug === 'story-0001') {
+    return {
+      title: 'Story #0001',
+      content: null // MDX content would be imported here
+    }
+  }
   return null
 }
 
@@ -49,6 +55,7 @@ export default async function StoryPage({ params }: StoryPageProps) {
 export async function generateStaticParams() {
   return [
     { slug: 'the-beginning' },
+    { slug: 'story-0001' },
     { slug: 'coming-soon' },
     { slug: 'hidden-tale' },
     { slug: 'secret-path' },
