@@ -1,54 +1,37 @@
-import { JournalLayout } from '@/components/JournalLayout'
-
 export const metadata = {
   title: 'The Beginning - Adventures with the Bull',
   description: 'The first tale in our serialized adventure',
 }
 
-<JournalLayout title="The Beginning">
+<div className="min-h-screen">
 
 # The Beginning
 
 In the depths of an ancient forest, where shadows dance between towering oaks and the air whispers secrets of ages past, our tale begins...
 
-<GraphicPanel 
-  src="/assets/forest-scene.jpg" 
-  alt="A mysterious forest at twilight" 
-  caption="The Whispering Woods, where few dare to venture"
-  priority={true}
-/>
-
 The protagonist had been walking for hours, guided only by an old map and an inexplicable pull toward something unknown. The trees seemed to lean inward, creating a natural cathedral of branches overhead.
 
-<Dialogue speaker="Elena" mood="whisper" position="left">
-  The map said there would be a clearing here... but all I see are more trees.
-</Dialogue>
+> **Elena** (whisper): "The map said there would be a clearing here... but all I see are more trees."
 
-<SceneTransition type="divider">
-  Hours passed...
-</SceneTransition>
+---
+
+*Hours passed...*
+
+---
 
 As twilight painted the sky in shades of amber and crimson, Elena finally stumbled into a circular clearing. At its center stood a massive stone covered in symbols that seemed to glow with their own inner light.
 
-<GraphicPanel 
-  src="/assets/stone-clearing.jpg" 
-  alt="A glowing stone monument in a forest clearing"
-  caption="The Stone of Beginnings"
-/>
-
-<Dialogue speaker="Elena" mood="normal" position="center">
-  This... this wasn't on the map. What is this place?
-</Dialogue>
+> **Elena**: "This... this wasn't on the map. What is this place?"
 
 The symbols pulsed brighter as she approached, and suddenly the air filled with a low, melodic humming. From the shadows stepped a figure cloaked in starlight.
 
-<Dialogue speaker="The Guide" mood="shout" position="right">
-  Welcome, seeker. You have found the place where all adventures begin.
-</Dialogue>
+> **The Guide**: "Welcome, seeker. You have found the place where all adventures begin."
 
-<SceneTransition type="chapter">
-  End of Chapter 1
-</SceneTransition>
+---
+
+**End of Chapter 1**
+
+---
 
 *What mysteries await Elena in this enchanted clearing? What role does the mysterious Guide play in her journey? The adventure continues...*
 
@@ -56,4 +39,4 @@ The symbols pulsed brighter as she approached, and suddenly the air filled with 
 
 **Author's Note**: This is the first installment of "Adventures with the Bull." Each story builds upon the last, creating an interconnected web of tales that span worlds, times, and dimensions.
 
-</JournalLayout>
+</div>

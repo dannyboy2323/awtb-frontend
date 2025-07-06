@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation'
-import { JournalLayout } from '@/components/JournalLayout'
 
 // This would normally come from a CMS or file system
 const getStoryContent = async (slug: string) => {
@@ -31,7 +30,7 @@ export default async function StoryPage({ params }: StoryPageProps) {
   // For demonstration, showing the structure
   // In practice, you'd import and render the MDX content here
   return (
-    <JournalLayout title={story.title}>
+    <div className="min-h-screen">
       <div className="text-center py-16">
         <h2 className="text-2xl text-amber-200 mb-8">Story: {story.title}</h2>
         <p className="text-amber-100/80 mb-8">
@@ -41,7 +40,7 @@ export default async function StoryPage({ params }: StoryPageProps) {
           Create an MDX file at <code>app/stories/{resolvedParams.slug}/page.mdx</code> to add your story content.
         </p>
       </div>
-    </JournalLayout>
+    </div>
   )
 }
 

@@ -1,7 +1,4 @@
 import type { MDXComponents } from 'mdx/types'
-import { GraphicPanel } from '@/components/GraphicPanel'
-import { Dialogue } from '@/components/Dialogue'
-import { SceneTransition } from '@/components/SceneTransition'
 
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -26,10 +23,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </p>
     ),
-    // Custom components for story elements
-    GraphicPanel,
-    Dialogue,
-    SceneTransition,
     ...components,
   }
 }
