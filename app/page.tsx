@@ -22,11 +22,15 @@ export default function HomePage() {
         <Link href="/stories/story-0001" className="pointer-events-auto">
           <div className="relative group cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/assets/postcard-hola-cuba.jpg"
-              alt="Hola from Cuba Postcard"
+              src="/assets/story-0001/story-0001-postcard-0.webp"
+              alt="Story #0001 Postcard"
               width={600}
               height={400}
               className="rounded-lg shadow-2xl group-hover:shadow-3xl transition-shadow duration-300"
+              style={{ 
+                filter: 'drop-shadow(0 10px 25px rgba(0,0,0,0.4))',
+                transform: 'rotate(-2deg)'
+              }}
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-300 rounded-lg"></div>
           </div>
