@@ -1,19 +1,7 @@
-import { PostcardTrigger } from '@/components/PostcardTrigger'
-import { CoinTrigger } from '@/components/CoinTrigger'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function HomePage() {
-  // Sample stories - these would typically come from a CMS or file system
-  const stories = [
-    {
-      slug: 'the-beginning',
-      title: '',
-      preview: '',
-      imageSrc: '/assets/story-preview-1.jpg'
-    },
-    // Add more stories as they're created
-  ]
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center p-4 relative">
