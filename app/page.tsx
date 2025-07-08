@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function HomePage() {
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center p-4 relative">
+    <div className="100vh min-h-screen flex flex-col justify-center items-center relative">
       {/* Postcard Overlay - Centered both vertically and horizontally */}
       <div className="fixed inset-0 flex items-center justify-center z-500 pointer-events-none">
         <Link href="/stories/story-0001" className="pointer-events-auto">
