@@ -12,8 +12,8 @@ export default function HomePage() {
             <Image
               src="/assets/story-0001/story-0001-postcard-0.webp"
               alt="Hola from Cuba Postcard"
-              width={600}
-              height={400}
+              width={300}
+              height={200}
               className="rounded-lg shadow-2xl group-hover:shadow-3xl transition-shadow duration-300"
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-300 rounded-lg"></div>
