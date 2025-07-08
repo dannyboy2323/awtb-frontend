@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center p-4 relative">
       {/* Postcard Overlay - Centered both vertically and horizontally */}
-      <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+      <div className="fixed inset-0 flex items-center justify-center z-500 pointer-events-none">
         <Link href="/stories/story-0001" className="pointer-events-auto">
           <div className="relative group cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
