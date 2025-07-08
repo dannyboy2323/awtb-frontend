@@ -10,7 +10,7 @@ export default function HomePage() {
         <Link href="/stories/story-0001" className="pointer-events-auto">
           <div className="relative group cursor-pointer hover:scale-105 transition-transform duration-300">
             <Image
-              src="/assets/postcard-hola-cuba.jpg"
+              src="/assets/story-0001/story-0001-postcard-0.webp"
               alt="Hola from Cuba Postcard"
               width={600}
               height={400}
