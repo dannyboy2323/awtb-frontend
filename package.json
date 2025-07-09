@@ -1,23 +1,33 @@
 {
   "name": "awtb-frontend",
   "version": "0.1.0",
+  "description": "A mobile-first, high-performance storytelling platform publishing serialized illustrated fiction",
   "private": true,
+  "homepage": "https://www.adventureswiththebull.com",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "export": "next build",
+    "static": "next build && npx serve out",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next out node_modules/.cache",
+    "analyze": "ANALYZE=true npm run build",
+    "sitemap": "next-sitemap",
+    "preview": "npm run build && npm run start"
   },
   "dependencies": {
+    "next": "15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.0",
     "@next/mdx": "latest",
     "@mdx-js/loader": "^2.3.0",
     "@tailwindcss/typography": "^0.5.9"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@next/bundle-analyzer": "15.2.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -27,6 +37,54 @@
     "eslint-config-next": "15.2.0",
     "@eslint/eslintrc": "^3",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21"
+    "postcss": "^8.4.21",
+    "next-sitemap": "^4.2.3",
+    "sharp": "^0.33.3",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=10.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "last 2 versions"
+    ],
+    "development": [
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 2 safari version"
+    ]
+  },
+  "keywords": [
+    "storytelling",
+    "fiction",
+    "graphic-novel",
+    "serialized",
+    "illustrated",
+    "nextjs",
+    "static-site",
+    "mobile-first",
+    "performance",
+    "adventure",
+    "fantasy",
+    "mdx",
+    "tailwindcss",
+    "react"
+  ],
+  "author": {
+    "name": "Adventures with the Bull",
+    "url": "https://www.adventureswiththebull.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adventures-with-the-bull/awtb-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adventures-with-the-bull/awtb-frontend/issues"
   }
 }
