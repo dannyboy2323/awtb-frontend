@@ -12,7 +12,7 @@ export default function HomePage() {
         >
           <div className="relative cursor-pointer transition-transform duration-300 hover:scale-105">
             <Image
-              src="https://cdn.adventureswiththebull.com/assets/story-0001/story-0001-postcard-0.webp"
+              src="https://nt1soyyin4fgyivx.public.blob.vercel-storage.com/assets/stories/0001/story-0001-postcard-0-s6bI7QUGy1M4dCw69BgyiUvCFvE5nZ.webp"
               alt="Hola from Cuba - The Beginning"
               width={400}
               height={267}
