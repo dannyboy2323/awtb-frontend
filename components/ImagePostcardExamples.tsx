@@ -6,31 +6,31 @@ import ImagePostcard from './ImagePostcard'
 const examples = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    alt: "Mountain landscape",
-    title: "Mountain Adventure",
-    subtitle: "Breathtaking views from the Swiss Alps"
+    src: "/assets/story-0001/story-0001-postcard-0.webp",
+    alt: "Hola from Cuba - The Beginning",
+    title: "Hola from Cuba",
+    subtitle: "The Beginning - A beautiful postcard from our Cuban adventure"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    alt: "Tropical beach",
-    title: "Paradise Found",
-    subtitle: "Crystal clear waters and white sandy beaches"
+    src: "/assets/story-0001/story-0001-postcard-0.webp",
+    alt: "Hola from Cuba - The Beginning",
+    title: "Cuban Memories",
+    subtitle: "Capturing the vibrant spirit and warmth of this incredible island"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    alt: "City skyline",
-    title: "Urban Dreams",
-    subtitle: "The city that never sleeps"
+    src: "/assets/story-0001/story-0001-postcard-0.webp",
+    alt: "Hola from Cuba - The Beginning",
+    title: "Caribbean Journey",
+    subtitle: "Every postcard tells a story of adventure and discovery"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    alt: "Forest path",
-    title: "Into the Wild",
-    subtitle: "Where adventure begins"
+    src: "/assets/story-0001/story-0001-postcard-0.webp",
+    alt: "Hola from Cuba - The Beginning",
+    title: "Travel Chronicles",
+    subtitle: "From the heart of Cuba with love and memories"
   }
 ]
 
