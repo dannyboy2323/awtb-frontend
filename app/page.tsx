@@ -7,7 +7,7 @@ export default function HomePage() {
       {/* Responsive Postcard Overlay */}
       <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
         <Link 
-          href="/read/story/00001/the-beginning" 
+          href="/story/00001/the-beginning" 
           className="pointer-events-auto group"
         >
           <div className="relative cursor-pointer transition-transform duration-300 hover:scale-105">
