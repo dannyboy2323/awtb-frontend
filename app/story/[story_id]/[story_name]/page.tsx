@@ -54,7 +54,7 @@ async function getStoryContent(storyId: string, storyName: string) {
       const content = await readFile(contentPath, 'utf-8')
       return content
     } catch {
-      // Fallback to a default story structure
+      // Fallback to a default story structure with local assets
       return `
 # ${storyName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
 
@@ -66,7 +66,7 @@ Welcome to this adventure story from Adventures with the Bull.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-![Story Image](https://nt1soyyin4fgyivx.public.blob.vercel-storage.com/assets/stories/${storyId}/story-${storyId}-image-1.webp)
+![Story Image](/assets/story-${storyId}/story-${storyId}-image-1.webp)
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -74,7 +74,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
-![Story Image](https://nt1soyyin4fgyivx.public.blob.vercel-storage.com/assets/stories/${storyId}/story-${storyId}-image-2.webp)
+![Story Image](/assets/story-${storyId}/story-${storyId}-image-2.webp)
 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 
@@ -106,14 +106,14 @@ export default async function StoryPage({ params }: StoryPageProps) {
     notFound()
   }
 
-  // Define cover image URL (from Vercel Blob or CDN)
-  const coverImageUrl = `https://nt1soyyin4fgyivx.public.blob.vercel-storage.com/assets/stories/${story_id}/cover-art.webp`
+  // Use local assets for better performance and reliability
+  const coverImageUrl = `/assets/story-${story_id}/cover-art.webp`
   
-  // Define additional story images
+  // Define local story images
   const storyImages = [
-    `https://nt1soyyin4fgyivx.public.blob.vercel-storage.com/assets/stories/${story_id}/story-${story_id}-image-1.webp`,
-    `https://nt1soyyin4fgyivx.public.blob.vercel-storage.com/assets/stories/${story_id}/story-${story_id}-image-2.webp`,
-    `https://nt1soyyin4fgyivx.public.blob.vercel-storage.com/assets/stories/${story_id}/story-${story_id}-image-3.webp`,
+    `/assets/story-${story_id}/story-${story_id}-image-1.webp`,
+    `/assets/story-${story_id}/story-${story_id}-image-2.webp`,
+    `/assets/story-${story_id}/story-${story_id}-image-3.webp`,
   ]
 
   return (
