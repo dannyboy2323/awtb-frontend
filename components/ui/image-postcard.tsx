@@ -35,9 +35,11 @@ export function ImagePostcard({
     </div>
   )
 
+  const containerStyles = "fixed inset-0 w-full h-full flex items-center justify-center z-50 pointer-events-none"
+
   if (href) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+      <div className={containerStyles}>
         <Link href={href} className="pointer-events-auto group">
           {imageElement}
         </Link>
@@ -46,7 +48,7 @@ export function ImagePostcard({
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+    <div className={containerStyles}>
       <div className="pointer-events-auto group">
         {imageElement}
       </div>
