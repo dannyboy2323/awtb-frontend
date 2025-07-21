@@ -168,8 +168,8 @@ body {
 
 /* ----------------------- Responsive Postcard Sizing ----------------------- */
 .postcard-responsive {
-  width: 70%;
-  max-width: 450px;
+  width: 90%;
+  max-width: 750px;
   min-width: 240px;
   height: auto;
 }
