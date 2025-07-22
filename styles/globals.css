@@ -176,43 +176,43 @@ body {
 }
 
 .postcard-container:hover {
-  transform: translateY(-4px) rotate(0.5deg);
+  transform: translateY(-2px);
 }
 
 .postcard-wrapper {
   position: relative;
-  /* Create a realistic postcard shadow effect */
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15))
-          drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1))
-          drop-shadow(0 16px 32px rgba(0, 0, 0, 0.05));
+  /* Create a realistic layered shadow effect */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08))
+          drop-shadow(0 8px 16px rgba(0, 0, 0, 0.04))
+          drop-shadow(0 12px 24px rgba(0, 0, 0, 0.02));
   transition: filter 0.3s ease;
 }
 
 .postcard-container:hover .postcard-wrapper {
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2))
-          drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15))
-          drop-shadow(0 24px 48px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16))
+          drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 16px 32px rgba(0, 0, 0, 0.08))
+          drop-shadow(0 20px 40px rgba(0, 0, 0, 0.04));
 }
 
 .postcard-image {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
-  /* Add a subtle white border like real postcards */
-  border: 8px solid #fefefe;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
-  /* Add slight paper texture effect */
-  background-color: #fefefe;
+  border-radius: 4px;
+  /* Subtle edge definition without border */
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.1),
+              0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Add a pseudo-element for extra depth and gloss */
+/* Add a pseudo-element for subtle gloss effect */
 .postcard-image::before {
   content: '';
   position: absolute;
-  inset: -8px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.05) 100%);
-  border-radius: 8px;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 40%, rgba(0,0,0,0.02) 100%);
+  border-radius: 4px;
   pointer-events: none;
   z-index: 1;
 }
@@ -220,13 +220,13 @@ body {
 .postcard-wrapper::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%;
-  height: 4px;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, transparent 70%);
-  filter: blur(4px);
+  width: 98%;
+  height: 2px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.06) 0%, transparent 80%);
+  filter: blur(2px);
   z-index: -1;
 }
 
@@ -238,23 +238,18 @@ body {
 }
 
 .postcard-container:hover .postcard-image {
-  transform: perspective(1000px) rotateX(2deg) rotateY(-1deg);
+  transform: perspective(2000px) rotateX(0.5deg) rotateY(-0.25deg);
 }
 
-/* Optional: Add vintage postcard stamp area */
+/* Add a subtle edge glow for depth */
 .postcard-wrapper::before {
   content: '';
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 60px;
-  height: 80px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
-  border: 1px dashed rgba(0,0,0,0.1);
+  inset: -1px;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.03) 100%);
   border-radius: 4px;
   pointer-events: none;
-  z-index: 2;
-  opacity: 0.5;
+  z-index: -1;
 }
 
 /* ----------------------- Portrait Orientation ----------------------- */
