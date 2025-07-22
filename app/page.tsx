@@ -6,8 +6,8 @@ export default function HomePage() {
       <ImagePostcard
         src="/assets/story-0001/story-0001-postcard-0.webp"
         alt="Hola from Cuba - The Beginning"
-        width={400}
-        height={267}
+        width={800}
+        height={533}
         href="/story/00001/the-beginning"
         priority={true}
       />

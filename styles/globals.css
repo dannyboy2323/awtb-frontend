@@ -167,11 +167,94 @@ body {
 }
 
 /* ----------------------- Responsive Postcard Sizing ----------------------- */
-.postcard-responsive {
-  width: 90%;
-  max-width: 750px;
-  min-width: 240px;
+.postcard-container {
+  position: relative;
+  width: 90vw;
+  max-width: 800px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.postcard-container:hover {
+  transform: translateY(-4px) rotate(0.5deg);
+}
+
+.postcard-wrapper {
+  position: relative;
+  /* Create a realistic postcard shadow effect */
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1))
+          drop-shadow(0 16px 32px rgba(0, 0, 0, 0.05));
+  transition: filter 0.3s ease;
+}
+
+.postcard-container:hover .postcard-wrapper {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2))
+          drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 24px 48px rgba(0, 0, 0, 0.1));
+}
+
+.postcard-image {
+  width: 100%;
   height: auto;
+  display: block;
+  border-radius: 8px;
+  /* Add a subtle white border like real postcards */
+  border: 8px solid #fefefe;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  /* Add slight paper texture effect */
+  background-color: #fefefe;
+}
+
+/* Add a pseudo-element for extra depth and gloss */
+.postcard-image::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.05) 100%);
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.postcard-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 4px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, transparent 70%);
+  filter: blur(4px);
+  z-index: -1;
+}
+
+/* Add subtle paper curl effect on corners */
+.postcard-image {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.postcard-container:hover .postcard-image {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-1deg);
+}
+
+/* Optional: Add vintage postcard stamp area */
+.postcard-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 60px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+  border: 1px dashed rgba(0,0,0,0.1);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.5;
 }
 
 /* ----------------------- Portrait Orientation ----------------------- */
@@ -179,9 +262,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-720x1280.jpg');
   }
-  .postcard-responsive {
-    width: 75%;
-    max-width: 260px;
+  .postcard-container {
+    width: 92vw;
+    max-width: none;
   }
 }
 
@@ -189,9 +272,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-768x1366.jpg');
   }
-  .postcard-responsive {
-    width: 72%;
-    max-width: 280px;
+  .postcard-container {
+    width: 91vw;
+    max-width: none;
   }
 }
 
@@ -199,9 +282,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-800x1280.jpg');
   }
-  .postcard-responsive {
-    width: 70%;
-    max-width: 300px;
+  .postcard-container {
+    width: 90vw;
+    max-width: none;
   }
 }
 
@@ -209,9 +292,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-1080x1920.jpg');
   }
-  .postcard-responsive {
-    width: 68%;
-    max-width: 320px;
+  .postcard-container {
+    width: 89vw;
+    max-width: none;
   }
 }
 
@@ -219,9 +302,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-1080x2340.jpg');
   }
-  .postcard-responsive {
-    width: 65%;
-    max-width: 340px;
+  .postcard-container {
+    width: 88vw;
+    max-width: none;
   }
 }
 
@@ -229,9 +312,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-1200x1920.jpg');
   }
-  .postcard-responsive {
-    width: 62%;
-    max-width: 360px;
+  .postcard-container {
+    width: 87vw;
+    max-width: none;
   }
 }
 
@@ -239,9 +322,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-1409x2752.jpg');
   }
-  .postcard-responsive {
-    width: 60%;
-    max-width: 380px;
+  .postcard-container {
+    width: 86vw;
+    max-width: 800px;
   }
 }
 
@@ -249,9 +332,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-1440x2560.jpg');
   }
-  .postcard-responsive {
-    width: 58%;
-    max-width: 400px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -259,9 +342,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-1440x3440.jpg');
   }
-  .postcard-responsive {
-    width: 56%;
-    max-width: 420px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -269,9 +352,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-1600x2560.jpg');
   }
-  .postcard-responsive {
-    width: 54%;
-    max-width: 440px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -279,9 +362,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-1668x2388.jpg');
   }
-  .postcard-responsive {
-    width: 52%;
-    max-width: 460px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -289,9 +372,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-1992x3891.jpg');
   }
-  .postcard-responsive {
-    width: 50%;
-    max-width: 500px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -299,9 +382,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-2048x2732.jpg');
   }
-  .postcard-responsive {
-    width: 45%;
-    max-width: 600px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -309,9 +392,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-2160x3840.jpg');
   }
-  .postcard-responsive {
-    width: 42%;
-    max-width: 650px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -319,8 +402,8 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-3450x6739.jpeg');
   }
-  .postcard-responsive {
-    width: 38%;
+  .postcard-container {
+    width: 85vw;
     max-width: 800px;
   }
 }
@@ -329,9 +412,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-pt-4320x7680.jpg');
   }
-  .postcard-responsive {
-    width: 35%;
-    max-width: 1000px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -340,9 +423,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-640x360.jpg');
   }
-  .postcard-responsive {
-    width: 55%;
-    max-width: 200px;
+  .postcard-container {
+    width: 90vw;
+    max-width: none;
   }
 }
 
@@ -350,9 +433,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-854x480.jpg');
   }
-  .postcard-responsive {
-    width: 52%;
-    max-width: 220px;
+  .postcard-container {
+    width: 89vw;
+    max-width: none;
   }
 }
 
@@ -360,9 +443,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-1280x720.jpg');
   }
-  .postcard-responsive {
-    width: 50%;
-    max-width: 280px;
+  .postcard-container {
+    width: 88vw;
+    max-width: 700px;
   }
 }
 
@@ -370,9 +453,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-1280x800.jpg');
   }
-  .postcard-responsive {
-    width: 48%;
-    max-width: 300px;
+  .postcard-container {
+    width: 87vw;
+    max-width: 750px;
   }
 }
 
@@ -380,9 +463,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-1334x750.jpg');
   }
-  .postcard-responsive {
-    width: 46%;
-    max-width: 320px;
+  .postcard-container {
+    width: 86vw;
+    max-width: 800px;
   }
 }
 
@@ -390,9 +473,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-1366x768.jpg');
   }
-  .postcard-responsive {
-    width: 44%;
-    max-width: 340px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -400,9 +483,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-1440x900.jpg');
   }
-  .postcard-responsive {
-    width: 42%;
-    max-width: 360px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -410,9 +493,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-1600x900.jpg');
   }
-  .postcard-responsive {
-    width: 40%;
-    max-width: 380px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -420,9 +503,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-1920x1080.jpg');
   }
-  .postcard-responsive {
-    width: 38%;
-    max-width: 400px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -430,9 +513,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-1920x1200.jpg');
   }
-  .postcard-responsive {
-    width: 36%;
-    max-width: 420px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -440,9 +523,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-2048x1536.jpg');
   }
-  .postcard-responsive {
-    width: 34%;
-    max-width: 450px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -450,9 +533,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-2160x1620.jpg');
   }
-  .postcard-responsive {
-    width: 32%;
-    max-width: 480px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -460,9 +543,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-2224x1668.jpg');
   }
-  .postcard-responsive {
-    width: 30%;
-    max-width: 500px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -470,9 +553,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-2340x1080.jpg');
   }
-  .postcard-responsive {
-    width: 28%;
-    max-width: 520px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -480,9 +563,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-2388x1668.jpg');
   }
-  .postcard-responsive {
-    width: 26%;
-    max-width: 550px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -490,9 +573,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-2520x1080.jpg');
   }
-  .postcard-responsive {
-    width: 24%;
-    max-width: 600px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -500,9 +583,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-2560x1440.jpg');
   }
-  .postcard-responsive {
-    width: 22%;
-    max-width: 650px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -510,9 +593,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-2560x1600.jpg');
   }
-  .postcard-responsive {
-    width: 20%;
-    max-width: 700px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -520,9 +603,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-2732x2048.jpg');
   }
-  .postcard-responsive {
-    width: 18%;
-    max-width: 750px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -530,8 +613,8 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-3440x1440.jpg');
   }
-  .postcard-responsive {
-    width: 16%;
+  .postcard-container {
+    width: 85vw;
     max-width: 800px;
   }
 }
@@ -540,9 +623,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-3840x2160.jpg');
   }
-  .postcard-responsive {
-    width: 14%;
-    max-width: 900px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -550,9 +633,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-4032x1685.jpg');
   }
-  .postcard-responsive {
-    width: 12%;
-    max-width: 950px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -560,9 +643,9 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-5120x1440.jpg');
   }
-  .postcard-responsive {
-    width: 10%;
-    max-width: 1100px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
 
@@ -570,8 +653,8 @@ body {
   body {
     background-image: url('/assets/landing/landing-ls-7680x4320.jpg');
   }
-  .postcard-responsive {
-    width: 8%;
-    max-width: 1400px;
+  .postcard-container {
+    width: 85vw;
+    max-width: 800px;
   }
 }
